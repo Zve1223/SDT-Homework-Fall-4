@@ -1,0 +1,2 @@
+# Requirements for the project
+# No external dependencies required; math and unittest are part of the standard library.
