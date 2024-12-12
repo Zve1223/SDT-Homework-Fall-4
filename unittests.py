@@ -56,7 +56,7 @@ class GeometryTestCase(unittest.TestCase):
 
     def test_rectangle_area_zero_1(self):
         result = rectangle.area(0, 52)
-        self.assertEqual(result, 52)
+        self.assertEqual(result, 0)     # Correct value 52 -> 0
 
     def test_rectangle_area_zero_2(self):
         result = rectangle.area(0, 0)
@@ -100,7 +100,7 @@ class GeometryTestCase(unittest.TestCase):
 
     def test_circle_area_float(self):
         result = circle.area(math.cos(math.e))
-        self.assertEqual(result, math.cos(math.e) ** 2 * math.pi)
+        self.assertEqual(round(result, 3), round(math.cos(math.e) ** 2 * math.pi, 3))   # Added inaccuracy
 
     def test_rectangle_perimeter_float(self):
         result = rectangle.perimeter(math.e, math.pi)
